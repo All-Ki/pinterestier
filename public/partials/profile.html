@@ -1,0 +1,40 @@
+<div class="row">
+
+  <div id='inputs' class="col-xs-4">
+    <div id='urlInput'> Url : <input ng-model='newImage.url' ng-change="updatePreview()"></input>
+    </div>
+
+    <div id='nameInput'> Name : <input ng-model='newImage.title'></input>
+    </div>
+
+    <button type='button' ng-click='saveImage()'> Save </button>
+  </div>
+
+  <div id='preview' class='col-xs-8'>
+    <img fallback-src id='previewImg' style='width : 100%; max-height : 300px;' ng-src='http://www.preview.ph/images/previewLogo.png'></img>
+  </div>
+
+</div>
+<hr>
+
+<div id='imagesContainer'>
+  <div ng-switch on='images.length'>
+    <div ng-switch-when='0'>
+      whoops it's empty
+    </div>
+
+    <div ng-switch-default>
+
+       <div masonry column-width ="200" masonry-options="{gutter : 5}" item-selector=".displayimg">
+        <div masonry-brick  class='displayimg' ng-repeat='image in images'>
+
+          <span class='imgTitle'>{{image.title}}</span>
+          <button class='deleteButton' ng-click='delete(image.id)'> DELETE </button>
+          <img fallback-src class='brickImg' ng-src='{{image.url}}' />
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

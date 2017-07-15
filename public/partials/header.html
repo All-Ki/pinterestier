@@ -1,0 +1,18 @@
+<div id='header' ng-controller='headerController'>
+<nav class="navbar navbar-inverse navbar-toggleable-md navbar-light bg-faded">
+
+  <a class="navbar-brand" href="#">Navbar</a>
+  <div ng-switch='user'>
+    <div ng-switch-when='undefined'>
+      <a href='/auth/twitter'> LOGIN WITH TWITTER </a>
+    </div>
+    <div ng-switch-default>
+
+  <a href= '#!/user'>  {{user.displayName}}</a>
+
+    </div>
+
+  </div>
+
+</nav>
+</div>

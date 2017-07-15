@@ -1,0 +1,36 @@
+.brickImg {
+z-index: -1;
+position: relative;
+width : 200px;
+height : 200px;
+
+}
+
+.displayimg{
+  position: relative;
+  width : 200px;
+  height : 200px;
+  max-width: 200px;
+  max-height : 200px;
+}
+
+.ownerButton{
+  position: absolute;
+  top: 0px;
+  left:0px;
+}
+.deleteButton{
+position: absolute;
+top: 0px;
+right: 0px;
+
+}
+
+.imgTitle{
+  position: absolute;
+  bottom: 0;
+  text-align:  center;
+  background-color: rgba(255, 0, 0, 0.7);
+  overflow:  hidden;
+  max-width  : 200px;
+}

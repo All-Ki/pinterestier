@@ -1,0 +1,23 @@
+
+<div id='imagesContainer'>
+  <div ng-switch on='images.length'>
+    <div ng-switch-when='0'>
+      whoops it's empty
+    </div>
+    <div ng-switch-default>
+      <div masonry column-width ="200" masonry-options="{gutter : 5
+        }" item-selector=".displayimg">
+       <div masonry-brick  class='displayimg' ng-repeat='image in images'>
+         <a class='ownerButton' href='#!/user/{{image.owner}}/{{image.ownerName}}'>{{image.ownerName}}</a>
+         <span class='imgTitle'>{{image.title}}</span>
+         <img fallback-src class='brickImg' ng-src='{{image.url}}' />
+
+       </div>
+
+     </div>
+</div>
+<br>
+</div>
+</masonry>
+</div>
+</div>
