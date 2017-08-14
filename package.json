@@ -2,8 +2,8 @@
   "name": "pinterestier",
   "version": "1.0.1",
   "scripts": {
-    "start": "node server.js"
-		"postinstall" : "./node_modules/bower/bin/bower install"
+    "start": "node server.js",
+	"postinstall" : "./node_modules/bower/bin/bower install"
 
   },
   "author": "Blake Johnston",
